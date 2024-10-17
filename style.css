@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Kart köşelerini yuvarla */
+    overflow: hidden; /* Kart içindeki öğelerin taşmasını önle */
+}
+
+.card img {
+    border-radius: 10px 10px 0 0; /* Karttaki resmin üst köşelerini yuvarla */
+}
+
+.price {
+    font-size: 1.2em;
+    color: #ff5722;
+}
+
+.nav-pills .nav-link {
+    border-radius: 8px; /* Menü kategorisi için border-radius */
+    color: #fff;
+    background-color: #343a40;
+    margin-right: 10px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ff5722;
+}
+
+.tab-content {
+    border: 1px solid #dee2e6;
+    border-radius: 8px; /* Kapsayıcıyı yuvarla */
+    padding: 20px; /* İçerik ile kenarlar arasında boşluk bırak */
+}
+
+#cart-items-dropdown {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#cart-total {
+    background-color: #ff5722;
+    padding: 2px 8px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+.navbar {
+    transition: background-color 0.3s; /* Arka plan rengi geçişi için */
+}
+
+.sticky-top {
+    background-color: rgba(52, 58, 64, 0.9); /* Arka planı biraz şeffaf yap */
+}

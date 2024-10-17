@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Cafe Menu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+                <!-- Sepet Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="cartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-cart"></i> <span id="cart-total">0</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown">
+                        <li><h6 class="dropdown-header">Sepetim</h6></li>
+                        <li><ul id="cart-items-dropdown" class="list-group list-group-flush"></ul></li>
+                        <li><div class="dropdown-divider"></div></li>
+                        <li class="px-3"><strong>Total: <span id="dropdown-total-price">0.00</span></strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero bg-cover text-light text-center d-flex align-items-center justify-content-center" style="background-image: url(images/cafe-1200x600-1.webp); height: 400px;">
+    <div>
+        <h1>Welcome to Our Cafe</h1>
+        <p>Delicious meals and refreshing drinks</p>
+    </div>
+</section>
+
+<!-- Menu Categories -->
+<div class="container mt-5">
+    <h2 class="text-center">Our Menu</h2>
+    <ul class="nav nav-pills justify-content-center mt-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <button class="nav-link active" id="pills-hot-drinks-tab" data-bs-toggle="pill" data-bs-target="#pills-hot-drinks" type="button" role="tab" aria-controls="pills-hot-drinks" aria-selected="true">Sıcak İçecekler</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="pills-cold-drinks-tab" data-bs-toggle="pill" data-bs-target="#pills-cold-drinks" type="button" role="tab" aria-controls="pills-cold-drinks" aria-selected="false">Soğuk İçecekler</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="pills-desserts-tab" data-bs-toggle="pill" data-bs-target="#pills-desserts" type="button" role="tab" aria-controls="pills-desserts" aria-selected="false">Tatlılar</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="pills-main-tab" data-bs-toggle="pill" data-bs-target="#pills-main" type="button" role="tab" aria-controls="pills-main" aria-selected="false">Ana Yemekler</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="pills-snacks-tab" data-bs-toggle="pill" data-bs-target="#pills-snacks" type="button" role="tab" aria-controls="pills-snacks" aria-selected="false">Atıştırmalıklar</button>
+        </li>
+    </ul>
+
+    <div class="tab-content mt-4" id="pills-tabContent">
+        <!-- Hot Drinks -->
+        <div class="tab-pane fade show active" id="pills-hot-drinks" role="tabpanel" aria-labelledby="pills-hot-drinks-tab">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Cappuccino-Blend-21-150x150.jpg" class="card-img-top" alt="Cappuccino">
+                        <div class="card-body">
+                            <h5 class="card-title">Cappuccino</h5>
+                            <p class="price">4.00</p>
+                            <button class="btn btn-primary add-to-cart">Sepete ekle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/espresso-chai-latte-200x200-1-150x150.png" class="card-img-top" alt="Latte">
+                        <div class="card-body">
+                            <h5 class="card-title">Latte</h5>
+                            <p class="price">5.00</p>
+                            <button class="btn btn-primary add-to-cart">Sepete ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cold Drinks -->
+        <div class="tab-pane fade" id="pills-cold-drinks" role="tabpanel" aria-labelledby="pills-cold-drinks-tab">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/images.jfif" class="card-img-top" alt="Iced Coffee">
+                        <div class="card-body">
+                            <h5 class="card-title">Iced Coffee</h5>
+                            <p class="price">4.50</p>
+                            <button class="btn btn-primary add-to-cart">Sepete ekle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Healthy-and-Filling-Chia-Lemonade-Recipe-150x150.jpg" class="card-img-top" alt="Lemonade">
+                        <div class="card-body">
+                            <h5 class="card-title">Lemonade</h5>
+                            <p class="price">3.00</p>
+                            <button class="btn btn-primary add-to-cart">Sepete ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="tab-pane fade" id="pills-desserts" role="tabpanel" aria-labelledby="pills-desserts-tab">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/chocolate-birthday-cake-150x150.jpg" class="card-img-top" alt="Chocolate Cake">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Cake</h5>
+                            <p class="price">6.00</p>
+                            <button class="btn btn-primary add-to-cart">Sepete ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Courses -->
+        <div class="tab-pane fade" id="pills-main" role="tabpanel" aria-labelledby="pills-main-tab">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/5068_9407880f-4cfa-4fa1-8212-afe976df149d_Tavuk-Pirzola-scaled-1-150x150-1.jpg" class="card-img-top" alt="Grilled Chicken">
+                        <div class="card-body">
+                            <h5 class="card-title">Grilled Chicken</h5>
+                            <p class="price">12.00</p>
+                            <button class="btn btn-primary add-to-cart">Sepete ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Snacks -->
+        <div class="tab-pane fade" id="pills-snacks" role="tabpanel" aria-labelledby="pills-snacks-tab">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Restaurant-Quality-French-Fries-1-Eats-By-The-Beach-150x150.jpeg" class="card-img-top" alt="Fries">
+                        <div class="card-body">
+                            <h5 class="card-title">Fries</h5>
+                            <p class="price">3.50</p>
+                            <button class="btn btn-primary add-to-cart">Sepete ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
